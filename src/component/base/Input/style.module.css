@@ -1,0 +1,15 @@
+.input {
+   width: 500px;
+   height: 45px;
+   padding: 9px 20px;
+   border: 1px solid #9B9B9B;
+   filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.05));
+   border-radius: 4px;
+   color: #9B9B9B;
+   margin: 8px auto
+}
+.input:focus-visible {
+   outline: none;
+   border: 1px solid #DB3022;
+   box-shadow: 0 0 6px #DB3022;
+}

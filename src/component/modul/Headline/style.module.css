@@ -1,0 +1,15 @@
+.head {
+   font-weight: 700;
+   font-size: 34px;
+   line-height: 34px;
+   color: #222222;
+   margin-bottom: 5px;
+   margin-top: 50px;
+}
+.tagline {
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 12px;
+   color: #9B9B9B;
+   margin-bottom: 30px;
+}

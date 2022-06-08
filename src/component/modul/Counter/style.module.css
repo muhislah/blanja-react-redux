@@ -1,0 +1,27 @@
+.counter {
+   display: flex;
+   width: calc(36px * 3);
+   height: 36px;
+}
+.counter div {
+   width: 36px;
+   height: 36px;
+   margin:0;
+   font-size: 14px;
+   border-radius: 50%;
+   line-height: 36px;
+   text-align: center;
+}
+.decrement , .increment {
+   font-size: 30px !important;
+   cursor: pointer;
+}
+.decrement {
+   background: #D5D5D5;
+   color : white;
+}
+.increment {
+   background: #FFFFFF;
+   box-shadow: 0px 0px 4px rgba(142, 142, 142, 0.25);
+   color : black;
+}

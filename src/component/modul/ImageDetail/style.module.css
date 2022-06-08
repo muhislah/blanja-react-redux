@@ -1,0 +1,29 @@
+.images {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.images img {
+   border-radius: 8px;
+}
+.imageJumbo {
+   width: 378px;
+   height: 378px;
+}
+.imagesSmall{
+   margin-top:10px;
+   display: flex;
+   width: 378px;
+   justify-content: space-between;
+}
+.imageSmall {
+   width: 65px;
+   height: 65px;
+   cursor: pointer;
+}
+
+@keyframes fade {
+   to {
+      opacity: 1;
+   }
+}

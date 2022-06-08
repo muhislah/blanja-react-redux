@@ -1,0 +1,15 @@
+.container {
+   width: 70%;
+   margin: 0 auto;
+   margin-top: 50px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+.container h1 {
+   margin: 30px;
+}
+.container a {
+   text-decoration: none;
+   color : #DB3022;
+}

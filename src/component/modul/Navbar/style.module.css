@@ -1,0 +1,30 @@
+.navbar {
+   display: flex;
+   width: 170px;
+   justify-content: space-between;
+}
+
+.imgProfile {
+   width: 32px;
+   height: 32px;
+   border-radius: 50%;
+   cursor: pointer;
+}
+.navbar button {
+   width: 100px;
+   height: 35px;
+   border-radius: 40px;
+   margin-left: 7px;
+   cursor: pointer;
+   font-size: 14px;
+}
+button.login {
+   color : white;
+   background-color: #DB3022;
+   border: none;
+}
+button.signup {
+   color: #9B9B9B;
+   background-color: white;
+   border: 1px solid #9B9B9B;
+}

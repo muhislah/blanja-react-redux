@@ -1,0 +1,35 @@
+.container {
+   width: 80%;
+   background: #FFFFFF;
+   border: 1px solid #9B9B9B;
+   border-radius: 4px;
+   margin: auto;
+   padding:30px
+}
+.container p.head {
+   font-weight: 700;
+   font-size: 20px;
+}
+.forminput {
+   width: 50%;
+}
+.forminput .input {
+   display: flex;
+   justify-content: flex-end;
+   margin-bottom: 10px;
+   align-items: center;
+}
+.forminput input {
+   border: 1px solid #9B9B9B;
+   filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.05));
+   border-radius: 4px;
+   height: 48px;
+   margin-left: 10px;
+   width: 60%;
+   padding: 20px;
+}
+.forminput input[type='radio']{
+   width: 18px;
+   height: 18px;
+   margin-left: 25px;
+}

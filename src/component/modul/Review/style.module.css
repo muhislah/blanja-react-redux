@@ -1,0 +1,60 @@
+.review {
+   display: flex;
+   flex-direction: row;
+}
+.high {
+   font-weight: 700;
+   font-size: 60px;
+   color:#222;
+   margin-bottom:5px;
+}
+.high span {
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 20px;
+   color: #9B9B9B;
+}
+.stars img {
+   width: 22px;
+   height: 22px;
+   margin-right: 3px;
+}
+.starver {
+   display: flex;
+   flex-direction: column;
+   margin-left: 60px;
+   justify-content: space-between;
+}
+.starver img {
+   width: 16px;
+   height: 16px;
+}
+.fill {
+   width: 120px;
+   display: flex;
+   flex-direction: column;
+   
+}
+.fill hr {
+   border: 2px solid #DB3022;
+   border-radius: 4px;
+   opacity: 1;
+   margin: 0;
+   margin-top: 8px;
+   margin-left: 10px;
+}
+.spec {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+.spec p {
+   margin : 0;
+   line-height: 14px;
+   margin-left: 10px;
+   margin-top:3px;
+   font-weight: 500;
+   font-size: 14px;
+   color: #9B9B9B;
+}

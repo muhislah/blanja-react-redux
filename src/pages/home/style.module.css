@@ -1,0 +1,52 @@
+.container {
+   width: 80%;
+   margin: 80px auto;
+}
+.products {
+   display: flex;
+   width: 100%;
+   gap: auto;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   position: relative;
+   left: -10px;
+}
+.categories {
+   position: relative;
+   width: 100%;
+}
+.categories button {
+   font-family: sans-serif;
+   position: absolute;
+   width: 52px;
+   height: 52px;
+   border-radius: 50%;
+   background-color: white;
+   background: #FFFFFF;
+   box-shadow: 0px 4px 10px rgba(181, 181, 181, 0.25);
+   z-index: 3;
+   font-size: 24px;
+   border: none
+}
+.categories .container {
+   display: flex;
+   height: 100%;
+   width: 100%;
+   gap: 10px;
+   overflow: hidden;
+}
+.categories button.left {
+   top: calc(50% - 26px);
+   left : -26px;
+}
+.categories button.right {
+   top: calc(50% - 26px);
+   right : -26px;
+}
+.right {
+   right: 0;
+}
+.left {
+   left: 0
+}
+

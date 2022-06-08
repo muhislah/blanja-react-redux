@@ -1,0 +1,77 @@
+.shipping {
+   width: 720px;
+}
+.shipping p {
+   font-style: normal;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 16px;
+   color: #222;
+   margin:0;
+}
+.box {
+   margin-top: 15px;
+   background: #FFFFFF;
+   box-shadow: 0px 0px 8px rgba(115, 115, 115, 0.25);
+   border-radius: 4px;
+   padding: 20px;
+   width: 100%;
+}
+.box p {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 24px;
+}
+.box p.name{
+   font-weight: 600;
+}
+.box button {
+   width: 210px;
+   height: 36px;
+   border: 1px solid #9B9B9B;
+   border-radius: 24px;
+   color: #9B9B9B;
+   margin-top : 25px;
+}
+.modal {
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   left:0;
+   z-index: 100;
+   bottom:0
+}
+.overlay {
+   background-color: rgba(115, 115, 115, 0.25);
+   width: 100%;
+   height: 100%;
+   display: flex;
+}
+.boxmodal {
+   position: relative;
+   width: 800px;
+   height: 500px;
+   background: #FFFFFF;
+   border-radius: 8px;
+   margin: auto;
+   padding: 50px;
+   text-align: center;
+}
+.addnew {
+   margin-top: 10px;
+   width: 100%;
+   height: 60px;
+   font-size: 14px;
+   line-height: 60px;
+   border: 2px dashed #222;
+}
+button.close {
+   position: absolute;
+   background: none;
+   border: none;
+   top :10px;
+   right: 15px;
+   font-size: 24px;
+   cursor: pointer;
+}

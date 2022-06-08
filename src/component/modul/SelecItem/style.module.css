@@ -1,0 +1,26 @@
+.select {
+   background: #FFFFFF;
+   box-shadow: 0px 0px 8px rgba(115, 115, 115, 0.25);
+   border-radius: 4px;
+   width: 720px;
+   height: 64px;
+   padding: 25px;
+   display: flex;
+}
+.select p {
+   margin-left: 15px;
+   font-weight: 600;
+}
+.select p span {
+   font-weight: 400;
+}
+.button {
+   background : none;
+   border : none;
+   outline: none;
+   height: 100%;
+   color :#DB3022;
+   font-weight: 600;
+   margin-left: auto;
+   margin-right: 25px;
+}

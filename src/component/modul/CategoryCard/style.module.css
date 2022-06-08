@@ -1,0 +1,28 @@
+.card {
+   min-width: 200px;
+   width: 208px;
+   height: 220px;
+   display: flex;
+   position: relative;
+   background: #CC0B04;
+   border-radius: 8px;
+   cursor: pointer;
+}
+.card img {
+   position: absolute;
+   height: 70%;
+   max-width: 80%;
+   margin: auto;
+   z-index:0;
+   left: 50%;
+   top:50%;
+   transform: translate(-50%, -50%);
+}
+.card p {
+   margin: auto;
+   font-weight: 700;
+   font-size: 30px;
+   line-height: 30px;
+   color: #FFFFFF;
+   z-index: 2;
+}
