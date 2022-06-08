@@ -2,29 +2,24 @@ import React, { useEffect } from 'react'
 import Header from '../../component/modul/Header'
 import Headline from '../../component/modul/Headline'
 import style from './style.module.css'
-import { useParams } from 'react-router-dom'
-import { categoryAction } from '../../configs/redux/actions/category'
-import { useDispatch, useSelector } from 'react-redux'
 import Card from '../../component/modul/Card'
+import { useSelector } from 'react-redux'
 
 
 const Search = () => {
-   const {id} = useParams()
-   const dispatch = useDispatch()
-   const { category } = useSelector((state) => state)
+   const { search } = useSelector((state) => state)
+
+
    
-   useEffect(() => {
-      dispatch(categoryAction(id))
-   }, [])
-   console.log(category)
+   console.log(search)
   return (
     <>
       <Header />
       <div className={style.container}>
-         <p>Home  &gt;  category  &gt; {category.data.category}</p>
-         <Headline head={category.data.category} />
+         <p>Home  &gt;  Search  &gt; {search.key}</p>
+         <Headline head={`Search key : ${search.key}`} />
          <div className={style.products} >
-            { category.data.products ? category.data.products.map((data) => <Card name={data.name} price={data.price}/>) : <h1>Product Not Found</h1>}
+            { search.data.length > 0 ? search.data.map((data) => <Card name={data.name} price={data.price}/>) : <h1 style={{fontSize:'34px'}}>Product Not Found</h1>}
          </div>
       </div>
     </>
