@@ -14,7 +14,7 @@ const Products = () => {
    const {id} = useParams()
    useEffect(() => {
       dispatch(detailAction(id))
-   }, [])
+   }, [dispatch, id])
   return (
     <div>
        <Header />
