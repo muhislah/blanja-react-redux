@@ -15,7 +15,7 @@ const Categories = () => {
    
    useEffect(() => {
       dispatch(categoryAction(id))
-   }, [])
+   }, [dispatch, id])
    console.log(category)
   return (
     <>
