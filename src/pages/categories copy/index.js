@@ -24,7 +24,7 @@ const Categories = () => {
          <p>Home  &gt;  category  &gt; {category.data.category}</p>
          <Headline head={category.data.category} />
          <div className={style.products} >
-            { category.data.products ? category.data.products.map((data) => <Card name={data.name} price={data.price}/>) : <h1>Product Not Found</h1>}
+            { category.data.products ? category.data.products.map((data) => <Card img={data.photo[0]} name={data.name} price={data.price}/>) : <h1>Product Not Found</h1>}
          </div>
       </div>
     </>

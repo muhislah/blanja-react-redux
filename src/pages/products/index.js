@@ -5,24 +5,22 @@ import { useParams } from 'react-router-dom'
 import Header from '../../component/modul/Header'
 import ImageDetail from '../../component/modul/ImageDetail'
 import ProductDetail from '../../component/modul/ProductDetail'
-import { detailAction } from '../../configs/redux/actions/detailAction'
 
 
 const Products = () => {
-   const {detail} = useSelector((state) => state)
-   const dispatch = useDispatch()
-   const {id} = useParams()
-   useEffect(() => {
-      dispatch(detailAction(id))
-   }, [dispatch, id])
+   const {detail : {data} } = useSelector((state) => state)
   return (
     <div>
        <Header />
-       <div className={style.container}>
-         <p className={style.category}>Home  &gt;  category  &gt; {detail.data.category_name}</p>
+       <div className={style.container+ " mb-5"}>
+         <p className={style.category}>Home  &gt;  category  &gt; {data.category_name}</p>
          <div className={style.hero} >
-            <ImageDetail />
-            <ProductDetail name={detail.data.name} price={detail.data.price} id={detail.data.id}/>
+            {data ? (
+               <>
+                  <ImageDetail photo={data.photo}/>
+                  <ProductDetail name={data.name} price={data.price} id={data.id}/>
+               </>
+            ) : "Loading..."}
          </div>
        </div>
     </div>

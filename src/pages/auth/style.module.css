@@ -1,18 +1,28 @@
+.body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 40px
+}
 .container {
    width: 80%;
    margin: 0 auto;
    display : flex;
    flex-direction: column;
    align-items: center;
-   margin-top: 50px;
 }
 .container > p {
    font-weight: 700;
-   font-size: 18px;
+   font-size: 1.1rem;
    margin: 30px auto
 }
 .container input {
-   margin: 10px auto
+   margin: 10px auto;
+   animation : come 200ms ease-in forwards;
+}
+.container a {
+   color : #DB3022;
+   font-size : 1.1rem
 }
 .selector {
    margin-bottom: 30px;
@@ -31,11 +41,35 @@
    border-top-right-radius: 4px;
    border-bottom-right-radius: 4px;
 }
-.selector button[active='true'] {
+.selector button.active {
    background-color: #DB3022;
    color : white;
    border: none;
 }
 .container > button {
    margin-top: 30px;
+}
+
+@media screen and (max-width : 480px) {
+   .container {
+      width: 95%;
+   }
+   .container input {
+      width: 100%;
+   }
+   .container > button {
+      width: 100%;
+   }
+}
+
+@keyframes come {
+   0% {
+      transform: scaleY(0);
+   }
+   80%{
+      transform: scaleY(1.1);
+   }
+   100% {
+      transform: scaleY(1);
+   }
 }

@@ -27,6 +27,9 @@
    color: #9B9B9B;
 
 }
+button:disabled {
+   opacity: 0.6;
+}
 .summary button {
    background: #DB3022;
    border-radius: 25px;

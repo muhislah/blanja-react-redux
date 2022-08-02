@@ -1,16 +1,14 @@
 const initialState = {
-   data : []
+   cart : []
 }
 
 const cartReducer = (state = initialState, action) => {
-   if (action.type === 'ADD_TO_CART'){
+   if (action.type === 'GET_CART'){
       return {
-         ...state,
-         data : [
-            ...state.data,
-            action.payload
-         ]
+         data : action.payload
       }
+   }else if (action.type === 'ADD_TO_CART'){
+      return state
    }else {
       return state
    }

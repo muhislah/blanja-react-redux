@@ -6,6 +6,12 @@
   height: 40vmin;
   pointer-events: none;
 }
+.sliderimg{
+  width: 70%;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

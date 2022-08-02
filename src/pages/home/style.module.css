@@ -2,14 +2,33 @@
    width: 80%;
    margin: 80px auto;
 }
+.loading::after {
+   content: '';
+   animation: load 1000ms ease-in infinite;
+}
+
+@keyframes load {
+   0% {
+      content: '.';
+   }
+   50% {
+      content : '..'
+   }
+   80%{
+      content: '...';
+   }
+}
 .products {
    display: flex;
    width: 100%;
    gap: auto;
    flex-wrap: wrap;
-   justify-content: flex-start;
    position: relative;
    left: -10px;
+}
+.products::after {
+   content: '';
+   flex : auto
 }
 .categories {
    position: relative;

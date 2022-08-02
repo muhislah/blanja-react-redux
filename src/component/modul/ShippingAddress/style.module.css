@@ -51,10 +51,11 @@
 .boxmodal {
    position: relative;
    width: 800px;
-   height: 500px;
+   min-height: 400px;
+   height: auto;
    background: #FFFFFF;
    border-radius: 8px;
-   margin: auto;
+   margin: 50px auto 50px;
    padding: 50px;
    text-align: center;
 }

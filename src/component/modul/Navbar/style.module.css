@@ -2,6 +2,7 @@
    display: flex;
    width: 170px;
    justify-content: space-between;
+   position: relative;
 }
 
 .imgProfile {
@@ -28,3 +29,25 @@ button.signup {
    background-color: white;
    border: 1px solid #9B9B9B;
 }
+.navbar .popup {
+   width: 15px;
+   font-size: 9px;
+   height: 15px;
+   background-color: #DB3022;
+   color: white;
+   line-height: 18px;
+   text-align: center;
+   border-radius: 50%;
+   animation : hithere 1s ease infinite;
+   position: absolute;
+   bottom:0;
+   left:0;
+}
+
+@keyframes hithere {
+   30% { transform: scale(1.2); }
+   40%, 60% { transform: rotate(-20deg) scale(1.2); }
+   50% { transform: rotate(20deg) scale(1.2); }
+   70% { transform: rotate(0deg) scale(1.2); }
+   100% { transform: scale(1); }
+ }

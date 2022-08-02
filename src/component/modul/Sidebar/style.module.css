@@ -10,12 +10,10 @@
 .profile {
    width: 60%;
    position: relative;
-   margin-left: auto;
+   margin : 50px auto 20px;
    display: flex;
    margin-bottom: 70px;
    align-items: center;
-   margin-right: 25px;
-   margin-top : 50px;
 }
 .profile .profileImage {
    width: 60px;
@@ -62,11 +60,9 @@
    width: 60%;
    height: 100%;
    position: relative;
-   margin-left: auto;
+   margin : 20px auto;
    display: flex;
    flex-direction: column;
-   margin-bottom: 70px;
-   margin-right: 25px;
 }
 .listmenu {
    display: flex;

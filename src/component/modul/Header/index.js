@@ -14,14 +14,13 @@ const Header = () => {
    const navigate = useNavigate()
    const dispatch = useDispatch()
    const {login} = useSelector((state) => state)
-   const [search, setSearch] = useState('')
+   const [search, setSearch] = useState()
 
    const handleSubmit = (e) => {
-      navigate('/search')
       e.preventDefault()
+      navigate({pathname : '/search', search : `?search=${search}`})
       dispatch(handleSearch(search))
-      setSearch('')
-      
+      setSearch('')  
    }
    
   return (

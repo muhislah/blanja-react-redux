@@ -6,7 +6,7 @@ const detailReducer = (state = initialState, action) => {
    if (action.type === 'GET_DETAIL'){
       return {
          ...state,
-         data : {...action.payload[0]}
+         data : {...action.payload}
       }
    }else {
       return state
