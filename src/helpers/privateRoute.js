@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 export const RemoveToken = ({ children }) => {
-  const token = window?.localStorage.getItem('access-token')
+  const token = localStorage.getItem('access-token')
   const navigate = useNavigate()
   if (token) {
     Swal.fire({
@@ -25,7 +25,7 @@ export const RemoveToken = ({ children }) => {
             <>{children}</>
           )
       }else {
-        return navigate('/home')
+        return navigate('/')
       }
     })
   }

@@ -11,20 +11,19 @@ import Card from '../../component/modul/Card'
 const Categories = () => {
    const {id} = useParams()
    const dispatch = useDispatch()
-   const { category } = useSelector((state) => state)
+   const { category : { category , dataCategory } } = useSelector((state) => state)
    
    useEffect(() => {
       dispatch(categoryAction(id))
-   }, [dispatch, id])
-   console.log(category)
+   }, [])
   return (
     <>
       <Header />
       <div className={style.container}>
-         <p>Home  &gt;  category  &gt; {category.data.category}</p>
-         <Headline head={category.data.category} />
+         <p>Home  &gt;  category  &gt; {category}</p>
+         <Headline head={category} />
          <div className={style.products} >
-            { category.data.products ? category.data.products.map((data) => <Card name={data.name} img={data.photo[0]} price={data.price}/>) : <h1>Product Not Found</h1>}
+            { dataCategory?.length > 0 ? dataCategory.map((data) => <Card name={data.name} img={data.photo[0]} price={data.price}/>) : <h1>Product Not Found</h1>}
          </div>
       </div>
     </>

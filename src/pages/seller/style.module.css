@@ -89,3 +89,26 @@
    position: relative;
    margin-left: auto;
 }
+.arrow {
+   transform: scale(0.8);
+   margin-left: auto
+}
+.rotate {
+   transform: rotate(180deg);
+}
+.pageButton {
+   width: 40px !important;
+   height: 40px !important;
+   border: 1px solid #9B9B9B;
+   border-radius: 5px !important;
+   color: #9B9B9B;
+   background-color: white;
+}
+.pageButtonActive {
+   width: 40px !important;
+   height: 40px !important;
+   border: 1px solid white !important;
+   color: white !important;
+   border-radius: 5px !important;
+   background-color: #DB3022 !important;
+}

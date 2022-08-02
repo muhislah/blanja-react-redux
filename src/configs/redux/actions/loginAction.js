@@ -5,7 +5,7 @@ import { getCart } from "./cartAction";
 import { categoryAction } from "./category";
 import { getCheckout } from "./checkoutAction";
 
-export const handleLogin = (email, password, navigate) => async(dispatch) =>{
+export const handleLogin = (email, password, status, navigate) => async(dispatch) =>{
    try {
       dispatch({type: 'LOGIN_PENDING'})
       const result = await axios.post(process.env.REACT_APP_BACKEND_API+'/auth/login', {
@@ -13,6 +13,13 @@ export const handleLogin = (email, password, navigate) => async(dispatch) =>{
          password : password
       })
       const user = result.data.data
+      if (user.status !== status){
+         if(user.status == 'customer'){
+            return Swal.fire('Error', 'Account is registered as customer','error')
+         }else {
+            return Swal.fire('Error', 'Account is registered as Seller','error')
+         }
+      }
       if ( result.data.message === "EMAIL OR PASSWORD WRONG"){
          return Swal.fire('Error', 'Email or password wrong','error')
       }

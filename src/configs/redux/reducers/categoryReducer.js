@@ -1,5 +1,7 @@
 const initialState = {
-   data : []
+   data : [],
+   category : "",
+   dataCategory : []
 }
 
 const categoryReducer = (state = initialState, action) => {
@@ -8,7 +10,13 @@ const categoryReducer = (state = initialState, action) => {
          ...state,
          data : action.payload
       }
-   }else {
+   }else if (action.type === 'GET_DETAIL_CATEGORY'){
+      return {
+         ...state,
+         category : action.payload.category,
+         dataCategory : action.payload.products
+      }
+   }else{
       return state
    }
 }

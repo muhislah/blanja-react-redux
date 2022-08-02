@@ -9,6 +9,7 @@ import ProductDetail from '../../component/modul/ProductDetail'
 
 const Products = () => {
    const {detail : {data} } = useSelector((state) => state)
+   const arrayLine = data?.description?.split('\n')
   return (
     <div>
        <Header />
@@ -21,6 +22,21 @@ const Products = () => {
                   <ProductDetail name={data.name} price={data.price} id={data.id}/>
                </>
             ) : "Loading..."}
+         </div>
+         <div>
+            <h1 className='mt-5'>Information</h1>
+            <h4>Condition</h4>
+            <p style={{
+               color : "#DB3022"
+            }}>New</p>
+            <h4 className='mb-4'>Description</h4>
+            <div>
+               {
+                  arrayLine.map(data => {
+                     return <p>{data}</p>
+                  })
+               }
+            </div>
          </div>
        </div>
     </div>

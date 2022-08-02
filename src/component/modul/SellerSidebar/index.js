@@ -32,11 +32,13 @@ const SellerSidebar = () => {
     <div className={style.sidebar}>
        <div className={style.profile}>
           <div className={style.profileImage}>
-             <img src={noimage} alt="profile" />
+             <img src={profile?.photo || noimage} alt="profile" />
           </div>
           <div className={style.identity}>
              <p>{profile.storename}</p>
-             <span className='text-muted text-sm'>{profile.fullname}</span>
+             <span className='text-muted' style={{
+               fontSize : "12px"
+             }}>by {profile.fullname}</span>
           </div>
        </div>
        <div className={style.menu}>

@@ -4,10 +4,12 @@ import preview from './preview.svg'
 import desc from './desc.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { handleForm } from '../../../configs/redux/actions/handleForm'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 const EditProduct = () => {
+  const navigate = useNavigate()
   const { category : listCategory } = useSelector(state => state)
   const [data, setData] = useState({})
   const [edit, setEdit] = useState({})
@@ -56,8 +58,11 @@ const EditProduct = () => {
           }
         }
       }
-      const result = axios.put(process.env.REACT_APP_BACKEND_API+'/products/'+id, data)
-      console.log(result)
+      const result = await axios.put(process.env.REACT_APP_BACKEND_API+'/products/'+id, data)
+      if(result.data.message == "UPDATE DATA SUCCESS"){
+        Swal.fire('Success','Update product success', 'success')
+        return navigate('/seller/myproduct')
+      }
     } catch (error) {
       console.log(error)
     }
@@ -107,7 +112,7 @@ const EditProduct = () => {
         <hr />
         <div className={style.textarea}>
           <img src={desc} alt='describe' />
-          <textarea defaultValue={data.description} name="decription" onChange={(e) => handleChange(e)} />
+          <textarea defaultValue={data.description} name="description" onChange={(e) => handleChange(e)} />
         </div>
         
       </div>

@@ -7,18 +7,15 @@ import style from './style.module.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import Carousel from '../../component/modul/Carousel'
-import { useDispatch } from 'react-redux'
-import { categoryAction } from '../../configs/redux/actions/category'
 
 
 const Home = () => {
   const navigate = useNavigate()
-  const dispatch = useDispatch()
   const [products, setProducts] = useState([])
   const [categories, setCategories] = useState([])
   const fetchData = async () => {
     try {
-      const result = await axios.get(process.env.REACT_APP_BACKEND_API + '/products')
+      const result = await axios.get(process.env.REACT_APP_BACKEND_API + '/products?limit=20')
       const categories = await axios.get(process.env.REACT_APP_BACKEND_API + '/categories')
       setProducts(result.data.data)
       setCategories(categories.data.data)
@@ -28,7 +25,6 @@ const Home = () => {
   }
   useEffect(() => {
     fetchData()
-    dispatch(categoryAction())
   }, [])
   return (
     <>

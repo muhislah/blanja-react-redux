@@ -39,7 +39,7 @@ const Register = () => {
        <Input ph="Email" name="email" onChange={(e) => handleChange(e)} />
        <Input ph="Phone Number" name="phone" defaultValue={null} type={(status === "customer") ? "hidden" : "text"} onChange={(e) => handleChange(e)} />
        <Input ph="Store Name" name="storename" defaultValue={null} type={(status === "customer") ? "hidden" : "text"} onChange={(e) => handleChange(e)} />
-       <Input ph="Password" name="password" onChange={(e) => handleChange(e)} />
+       <Input ph="Password" type="password" name="password" onChange={(e) => handleChange(e)} />
        <Link to='/forgotpassword' />
        <Button name='Register' onClick={handleRegister}/>
        <p>Already have an account ? <Link to="/auth/login">Login</Link></p>

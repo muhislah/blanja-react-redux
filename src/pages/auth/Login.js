@@ -24,13 +24,13 @@ const Login = () => {
          <Logo />
          <p>Please login with your account</p>
          <div className={style.selector}>
-            <button value="customer" id='customer' className={(status === 'customer') ? style.active : ""} onClick={(e) => handleButton(e)}>Customer</button>
-            <button value="seller" id='seller' className={(status === 'seller') ? style.active : ""} onClick={(e) => handleButton(e)}>Seller</button>
+            <button value="customer" id='customer' className={((status === 'customer') ? style.active : "")+ " rounded-left" } onClick={(e) => handleButton(e)}>Customer</button>
+            <button value="seller" id='seller' className={((status === 'seller') ? style.active : "") } onClick={(e) => handleButton(e)}>Seller</button>
          </div>
          <Input ph="Email" onChange={(e) => setEmail(e.target.value)} />
-         <Input ph="Password" onChange={(e) => setPassword(e.target.value)} />
+         <Input ph="Password" type="password" onChange={(e) => setPassword(e.target.value)} />
          <Link to='/forgotpassword'>Forgot password</Link>
-         <Button name='Login' onClick={() => dispatch(handleLogin(email, password, navigate))}/>
+         <Button name='Login' onClick={() => dispatch(handleLogin(email, password, status, navigate))}/>
          <p>Don't have an account ? <Link to="/auth/register">Register here</Link></p>
       </div>
     </div>

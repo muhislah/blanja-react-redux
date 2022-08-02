@@ -21,7 +21,7 @@ const Card = ({name, price, img, id}) => {
             return navigate('/products/'+id)
             }}>Detail</button>
        </div>
-       <img alt="product" src={img ? img : example} className={style.productImg}/>
+       <img alt="product"src={img ? img : example} className={style.productImg+ " w-100"}/>
        <div className={style.cardDetail} id={id}>
           <p className={style.title} >{name ? name : 'Product Bla Bla'}</p>
           <p className={style.price} >{rupiah(price) }</p>

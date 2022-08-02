@@ -1,7 +1,7 @@
 import axios from "axios"
 import Swal from "sweetalert2"
 
-export const handleForm = (name, price, stock, description, photo, category, cb) => async(dispatch) => {
+export const handleForm = (name, price, stock, description, photo, category = 1, cb) => async(dispatch) => {
       try {
         console.log(name, price, stock, description, photo, category)
 
