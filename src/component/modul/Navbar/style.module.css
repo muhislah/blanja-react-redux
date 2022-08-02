@@ -51,3 +51,19 @@ button.signup {
    70% { transform: rotate(0deg) scale(1.2); }
    100% { transform: scale(1); }
  }
+
+ @media screen and (max-width : 480px) {
+   .navbar button {
+      width: 55px;
+      border-radius: 4px;
+   }
+   .navbar {
+      justify-content: flex-end;
+   }
+   .bell , .message {
+      display: none;
+   }
+   .cart {
+      margin-right: 10px;
+   }
+ }

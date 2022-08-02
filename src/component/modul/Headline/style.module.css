@@ -13,3 +13,9 @@
    color: #9B9B9B;
    margin-bottom: 30px;
 }
+
+@media screen and (max-width : 480px) {
+   .head {
+      margin-top: 20px;
+   }
+}

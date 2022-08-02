@@ -69,3 +69,35 @@
    left: 0
 }
 
+@media screen and (max-width : 480px) {
+   .carousel {
+      display: none;
+   }
+   .left {
+      display: none;
+   }
+   .right {
+      display: none;
+   }
+   .container {
+      height: auto;
+      width: 90%;
+   }
+   .categories {
+      padding-top: 10px;
+      position: relative;
+
+   }
+   .categories .container {
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+   }
+   .container {
+      width: 90%;
+   }
+   p.head {
+      margin-top: 0;
+   }
+}
+

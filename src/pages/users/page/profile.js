@@ -32,7 +32,7 @@ const Profile = () => {
       <p className={style.head}>My Profile</p>
       <p>Manage your profile information</p>
       <hr />
-      <div className='row'>
+      <div className={style.myform+ " row"}>
         <div className={style.forminput + " col-7"}>
           <div className={style.input}>
             <label>Name</label>

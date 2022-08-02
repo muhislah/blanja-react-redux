@@ -15,3 +15,18 @@
 .summary {
    margin-left: 10px;
 }
+
+@media screen and (max-width : 480px) {
+   .container {
+      width: 90%;
+   }
+   .bag {
+      flex-direction: column;
+   }
+   .summary {
+      margin : 10px 0;
+   }
+   .items h1 {
+      margin-top : 20px;
+   }
+}

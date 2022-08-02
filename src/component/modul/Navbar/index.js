@@ -21,14 +21,14 @@ function Navbar({type}) {
     return (
       <div className={style.navbar}>
          
-         <img style={{
+         <img className={style.cart} style={{
           display : (role !== 'customer' ? 'none' : 'block')
          }} src={cart} onClick={() => navigate('/mybag')} alt='Cart'/>
          {popup ? <div style={{
           display : (role !== 'customer' ? 'none' : 'block')
          }} className={style.popup}>{popup}</div> : ''}
-         <img src={bell} alt='Notification'/>
-         <img src={message} alt='Chat'/>
+         <img src={bell} className={style.bell} alt='Notification'/>
+         <img src={message} className={style.message} alt='Chat'/>
          <img src={profile?.photo || noprofile} className={style.imgProfile} alt='Profile' onClick={() => navigate(link)} />
       </div>
     )

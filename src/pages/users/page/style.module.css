@@ -76,3 +76,45 @@
    height: 150px;
    border-radius: 50%;  
 }
+
+@media screen and (max-width : 480px) {
+   .container {
+      width: 100%;
+      margin : 0 0 10px 0;
+      padding : 50px 25px;
+   }
+   .myform {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+   }
+   .myform:last-child {
+      width: 100% !important;
+   }
+   .buttonwhite {
+      margin : 20px auto !important;
+      width: 100% !important;
+   }
+   .myform .forminput {
+      width: 100% !important;
+      display: flex;
+      flex-direction: column;
+   }
+   .myform .forminput .input {
+      display: flex;
+      flex-direction: column;
+   }
+   .forminput input[type='radio']{
+      width: 18px;
+      height: 18px;
+      margin-left: 0;
+      display: inline;
+   }
+   .myform .forminput label {
+      display: block;
+   }
+   .myform .forminput input {
+      width: 100%;
+      text-align: center;
+   }
+}

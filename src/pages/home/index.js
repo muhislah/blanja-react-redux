@@ -30,7 +30,7 @@ const Home = () => {
     <>
       <Header />
       <div className={style.container}>
-        <div className="position-relative pt-5">
+        <div className={style.carousel+ " position-relative pt-5"}>
           <Carousel />
         </div>
         <Headline head="Category" tagline="What are you currently looking for" />

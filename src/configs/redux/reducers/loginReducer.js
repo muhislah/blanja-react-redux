@@ -23,7 +23,14 @@ const loginReducer = (state = initialState, action) => {
          isLogin: true,
          isLoading: false
       }
-   }else {
+   }else if(action.type === 'LOGOUT'){
+      return {
+         ...state,
+         isLogin: false,
+         isLoading: false
+      }
+   }
+   else {
       return state
    }
 }

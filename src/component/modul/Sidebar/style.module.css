@@ -75,3 +75,61 @@
    margin-left: 12px;
    color :    #9B9B9B;
 }
+
+@media screen and (max-width : 480px) {
+   .listmenu p {
+      display: none;
+   }
+   .sidebar {
+      width: 100%;
+      z-index: 99;
+      height: 50px;
+      position: fixed;
+      bottom : 0;
+      top : auto;
+      left: 0;
+      padding : 0
+   }
+   .profile {
+      position: absolute;
+      right: 0;
+      margin : 0;
+      bottom : 0;
+      width: 50%;
+      height: 70px;
+   }
+   .profile .profileImage {
+      position: absolute;
+      right: 10px;
+   }
+   .profile p {
+      position: absolute;
+      right: 80px;
+      bottom : 9px;
+      width: 40%;
+      line-height: 18px;
+      text-align: right;
+   }
+   .menu {
+      height: 50px;
+      position: absolute;
+      left : 20px;
+      top : 0;
+      margin : 0;
+      align-items: center;
+      flex-direction: row;
+   }
+   .menu .listmenu {
+      margin-right: 5px;
+      margin-bottom: 0;
+   }
+   .logout {
+      position: relative;
+      margin : 0;
+   }
+   .logout button {
+      margin: 0 !important;
+      height: 32px;
+      border-radius: 4px;
+   }
+}

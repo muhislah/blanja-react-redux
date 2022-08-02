@@ -27,3 +27,23 @@
       opacity: 1;
    }
 }
+
+@media screen and (max-width : 480px) {
+   .imageJumbo {
+      width: 100%;
+   }
+   .images {
+      width: 100%;
+   }
+   .imageSmall {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+   }
+   .imagesSmall{
+      margin-top:10px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+   }
+}
