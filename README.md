@@ -92,7 +92,7 @@ Contributions are what make the open source community such an amazing place to b
 
 | Customer profile | My Purchase |
 | ------------- | ------------- |
-| ![profile](/images/customerprofile.png?raw=true " ") | ![receiver](/images/mypurchase.png?raw=true " ") |
+| ![profile](/images/customerprofile.png?raw=true " ") | ![receiver](/images/mypurchasex.png?raw=true " ") |
 
 | Seller Product | Seller Profile |
 | ------------- | ------------- |

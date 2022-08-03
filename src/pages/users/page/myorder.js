@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './style.module.css'
 import { useSelector } from 'react-redux'
+import { rupiah } from '../../../helpers/rupiah'
 
 const MyOrder = () => {
   const {checkout :  {checkout}} = useSelector(state => state)
@@ -26,7 +27,7 @@ const MyOrder = () => {
                   <tr>
                     <th scope="row">{index +1}</th>
                     <td>{data.name}</td>
-                    <td>Rp. {data.stock * data.price}</td>
+                    <td>{rupiah(data.stock * data.price)}</td>
                     { data.status == 'pending' ? (
                       <td><div className='btn btn-sm btn-warning'>Pending</div></td>
                     ) : (<td><div className='btn btn-sm btn-success'>Success</div></td>)}
