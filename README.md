@@ -11,7 +11,7 @@
     <a href="https://github.com/muhislah/blanja-react-redux.git"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://telegram-xi.vercel.app/">View Demo</a>
+    <a href="https://blanja-frontend-app.vercel.app/">View Demo</a>
   </p>
 </p>
 
