@@ -2,15 +2,20 @@ import React from 'react'
 import style from './style.module.css'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { useState } from 'react'
+import InputAddress from '../../../component/modul/InputAddress'
+
 
 const MyAddress = () => {
   const { address  : {address}} = useSelector(state => state)
+  const [input, setInput] = useState(false)
   return (
     <div className={style.container}>
        <p className={style.head}>Choose another Address</p>
        <p>Manage your shipping address</p>
        <hr />
-        <button className={style.buttonaddress}>Add new address</button>
+       {input ? <InputAddress close={() => setInput(!input)}/> : ""}
+        <button className={style.buttonaddress} onClick={() => setInput(!input)}>Add new address</button>
         <div>
           { address.length > 0 ? (
             address.map((data) => {

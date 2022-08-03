@@ -15,7 +15,7 @@ const Products = () => {
    const arrayLine = detail?.description?.split('\n')
    useEffect(() => {
       setDetail(data)
-   },[])
+   },[data])
   return (
     <div>
        <Header />

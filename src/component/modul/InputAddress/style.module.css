@@ -1,0 +1,54 @@
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.5);
+  top:0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+}
+.body {
+  margin: auto;
+  width: 60%;
+  height: 70%;
+  background: white;
+  border-radius: 20px;
+  padding : 30px;
+  position: relative;
+}
+.close {
+  font-weight: 700;
+  font-size: 20px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+.body h3{
+  margin-top: 30px;
+  font-weight: 700;
+}
+.body > div {
+  margin-bottom: 10px;
+}
+.body label {
+  width: 22%;
+  text-align: right;
+  margin-right: 30px;
+}
+.button {
+  width: 200px;
+  height: 40px;
+  background-color: #DB3022;
+  color: white;
+  border-radius: 4px;
+  border: none;
+}
+
+@media screen and (max-width : 480px) {
+  .body {
+    width: 90%;
+    height: 90%;
+  }
+}

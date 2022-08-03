@@ -1,5 +1,6 @@
 import axios from "axios"
 import Swal from 'sweetalert2'
+import { mixin } from "../../../helpers/myAlert"
 export const getAddress = (token) => async (dispatch) => {
    try {
       const result = await axios.get(process.env.REACT_APP_BACKEND_API+'/address',{
@@ -31,6 +32,10 @@ export const addAddress = (token,data) => async (dispatch) =>{
       })
       console.log(data)
       dispatch({type : 'ADD_ADDRESS'})
+      mixin.fire({
+         title : "Success add address",
+         icon : 'success'
+      })
       dispatch(getAddress(token))
    } catch (error) {
       console.log(error)

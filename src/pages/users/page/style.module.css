@@ -64,6 +64,7 @@
    color: #9B9B9B;
    background-color: #FFFFFF;
    border-radius: 10px;
+   cursor: pointer;
 }
 .address {
    width: 100%;
