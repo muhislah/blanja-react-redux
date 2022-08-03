@@ -5,21 +5,27 @@ import { useParams } from 'react-router-dom'
 import Header from '../../component/modul/Header'
 import ImageDetail from '../../component/modul/ImageDetail'
 import ProductDetail from '../../component/modul/ProductDetail'
+import { useState } from 'react'
 
 
 const Products = () => {
    const {detail : {data} } = useSelector((state) => state)
-   const arrayLine = data?.description?.split('\n')
+   const [detail, setDetail] = useState({})
+   const dumpPhoto = []
+   const arrayLine = detail?.description?.split('\n')
+   useEffect(() => {
+      setDetail(data)
+   },[])
   return (
     <div>
        <Header />
        <div className={style.container+ " mb-5"}>
-         <p className={style.category}>Home  &gt;  category  &gt; {data.category_name}</p>
+         <p className={style.category}>Home  &gt;  category  &gt; {detail.category_name}</p>
          <div className={style.hero} >
-            {data ? (
+            {detail ? (
                <>
-                  <ImageDetail photo={data.photo}/>
-                  <ProductDetail name={data.name} price={data.price} id={data.id}/>
+                  <ImageDetail photo={detail?.photo || dumpPhoto}/>
+                  <ProductDetail name={detail.name} price={detail.price} id={detail.id}/>
                </>
             ) : "Loading..."}
          </div>
@@ -31,10 +37,10 @@ const Products = () => {
             }}>New</p>
             <h4 className='mb-4'>Description</h4>
             <div>
-               {
+               { arrayLine ?
                   arrayLine.map(data => {
                      return <p>{data}</p>
-                  })
+                  }) : "No Description"
                }
             </div>
          </div>

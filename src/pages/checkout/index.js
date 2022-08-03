@@ -17,11 +17,15 @@ const Checkout = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const token = localStorage.getItem('access-token')
-  const {cart} = useSelector((state) => state)
+  const {cart : { data }} = useSelector((state) => state)
+  const [cart, setCart] = useState([])
   const [currentAddress, setCurrentAddress] = useState()
   let total = 0;
+  useEffect(() => {
+    setCart(data)
+  },[])
   const handleCheckout = () => {
-    const checkoutData = cart.data.map((data) => {
+    const checkoutData = cart.map((data) => {
       return {
         ...data,
         address_id : currentAddress.id
@@ -39,13 +43,13 @@ const Checkout = () => {
             <div className={style.selected}>
               <ShippingAddress currentAddress={setCurrentAddress} />
             </div>
-            {cart.data ? cart.data.map((data) => {
+            {cart.length > 0 ? cart.map((data) => {
               total += (data.price*data.stock)
               return <CheckoutItem img={data.photo} id={data.id} name={data.name} price={data.price*data.stock} />
             })  : <h1>Cart Empty</h1>}
           </div>
           <div className={style.summary}>
-            <CheckoutSummary total={total} toggle={cart.data?.length > 0} onClick={handleCheckout}/>
+            <CheckoutSummary total={total} toggle={cart?.length > 0} onClick={handleCheckout}/>
           </div>
         </div>
 
