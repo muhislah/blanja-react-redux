@@ -13,15 +13,15 @@ export const handleLogin = (email, password, status, navigate) => async(dispatch
          password : password
       })
       const user = result.data.data
+      if ( result.data.message === "EMAIL OR PASSWORD WRONG"){
+         return Swal.fire('Error', 'Email or password wrong','error')
+      }
       if (user.status !== status){
          if(user.status == 'customer'){
             return Swal.fire('Error', 'Account is registered as customer','error')
          }else {
             return Swal.fire('Error', 'Account is registered as Seller','error')
          }
-      }
-      if ( result.data.message === "EMAIL OR PASSWORD WRONG"){
-         return Swal.fire('Error', 'Email or password wrong','error')
       }
       if (!user.accessToken) {
             return dispatch({type: 'LOGIN_FAILED'})
