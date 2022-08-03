@@ -10,6 +10,7 @@ import { rupiah } from '../../../helpers/rupiah'
 
 const ProductDetail = ({name, price, id}) => {
   const token = localStorage?.getItem('access-token')
+  const {profile : {profile : {role}}} = useSelector(state => state)
   const dispatch =  useDispatch()
   const [count, setCount] = useState(0)
 
@@ -42,7 +43,7 @@ const ProductDetail = ({name, price, id}) => {
          </div>
        </div>
        <button className={style.white} >Chat</button>
-       <button className={style.white} onClick={() => dispatch(addToCart(token, count || 1, id))}>Add bag</button>
+       <button className={style.white} onClick={() => dispatch(addToCart(token, count || 1, id, role))}>Add bag</button>
        <button className={style.orange} onClick={handleBuy}>Buy Now</button>
     </div>
   )

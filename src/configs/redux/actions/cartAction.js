@@ -15,11 +15,18 @@ export const getCart = (token) => async (dispatch) => {
    }
 }
 
-export const addToCart = (token, stock, product_id) => async (dispatch) =>{
+export const addToCart = (token, stock, product_id, role) => async (dispatch) =>{
    if (!token) {
       return Swal.fire(
          'Caution!',
          'Plese Login First!',
+         'warning'
+       )
+   }
+   if (role === 'seller'){
+      return Swal.fire(
+         'Caution!',
+         'Seller cannot Purchase Own Things!',
          'warning'
        )
    }
